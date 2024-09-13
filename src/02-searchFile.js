@@ -1,20 +1,3 @@
-function whatCui(files, dirFiles, cuis) {
-  const result = {
-    id: false,
-  };
-  files.forEach((file) => {
-    const name = file.split(".")[0];
-
-    dirFiles.forEach((cui) => {
-      if (cuis[cui].includes(name)) {
-        id = true;
-        return;
-      }
-    });
-    return id;
-  });
-}
-
 function searchFile(file, dirFiles, cuis) {
   const name = file.split(".")[0];
   const result = {
@@ -35,6 +18,5 @@ function searchFile(file, dirFiles, cuis) {
 }
 
 module.exports = {
-  whatCui,
   searchFile,
 };
