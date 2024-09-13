@@ -1,4 +1,23 @@
 // otroArchivo.js
-const { variable1, variable2, miFuncion } = require("./00-vars.js");
+const { getFiles } = require("./00-getFiles.js");
+const { cuis, filePath, rootDir, dirFiles } = require("./01-vars.js");
+const { whatCui, searchFile } = require("./02-getCui.js");
 
-miFuncion(); // 'Esto es una función exportada'
+async function app() {
+  // Get filenames
+  const files = await getFiles(filePath);
+  console.log(files);
+
+  // dirFiles.forEach((e) => {
+  //   console.log(cuis[e]);
+  // });
+
+  console.log(cuis);
+
+  // console.log(cuis.cui2192627.includes("368-2015"));
+
+  const filesInfo = files.map((file) => searchFile(file, dirFiles, cuis));
+  console.log(filesInfo);
+}
+
+app();
