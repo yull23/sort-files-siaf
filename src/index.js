@@ -16,15 +16,13 @@ async function app() {
     searchFile(file, dirFiles, cuis, rootDir)
   );
 
-  console.log(filesInfo);
-
   // Files Missing
   const filesMissing = getMissingSiaf(dirFiles, filesName, cuis);
 
   // Creating dir
   await createDir(dirs);
 
-  await movingFiles(filesInfo, dirs);
+  await movingFiles(filesInfo, dirs, rootDir);
 
   // Move
 

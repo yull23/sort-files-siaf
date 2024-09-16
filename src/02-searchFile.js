@@ -14,7 +14,8 @@ function searchFile(file, dirFiles, cuis, rootDir) {
     if (cuis[cui].includes(name)) {
       result.exist = true;
       result.cui = cui;
-      result.fileName = path.join(rootDir, "..", "public", cui);
+      result.folderName = path.join(rootDir, "..", "public", cui);
+      result.fileName = path.join(rootDir, "..", "public", file);
       return;
     }
   });
