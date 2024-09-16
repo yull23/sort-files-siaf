@@ -2,6 +2,21 @@ const path = require("path");
 
 const rootDir = path.resolve(__dirname);
 const filePath = path.resolve(rootDir, "..", "public");
+const dirFiles = [
+  "cui2192627",
+  "cui2192630",
+  "cui2192631",
+  "cui2192632",
+  "cui2192633",
+  "cui2192635",
+  "cui2192637",
+  "cui2192638",
+  "cui2192639",
+  "cui2216002",
+  "cui2216003",
+];
+
+const dirs = dirFiles.map((e) => path.join(rootDir, "..", "public", e));
 
 const cui2192627 = [
   "368-2015",
@@ -503,17 +518,6 @@ module.exports = {
     cui2216002,
     cui2216003,
   },
-  dirFiles: [
-    "cui2192627",
-    "cui2192630",
-    "cui2192631",
-    "cui2192632",
-    "cui2192633",
-    "cui2192635",
-    "cui2192637",
-    "cui2192638",
-    "cui2192639",
-    "cui2216002",
-    "cui2216003",
-  ],
+  dirFiles,
+  dirs,
 };
